@@ -1,16 +1,7 @@
 import React from "react";
 import "./Card.css";
 
-export const Card = ({
-  title,
-  price,
-  setPrice,
-  users,
-  gb,
-  support,
-  button,
-  onClick,
-}) => {
+export const Card = ({ title, price, users, gb, support, button, onClick }) => {
   return (
     <div className="card-wrapper">
       <div className="card-header">

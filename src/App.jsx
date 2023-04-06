@@ -7,6 +7,37 @@ function App() {
   const increasePrice = (price) => {
     setPrice(price + 1);
   };
+
+  const cardProps = [
+    {
+      title: "Free",
+      price: price,
+      users: 10,
+      gb: 2,
+      support: "Email",
+      button: "Sign up for free",
+      onClick: () => increasePrice(price),
+    },
+    {
+      title: "Pro",
+      price: 15,
+      users: 20,
+      gb: 10,
+      support: "Priority email",
+      button: "Get started",
+      onClick: () => {},
+    },
+    {
+      title: "Enterprise",
+      price: 29,
+      users: 30,
+      gb: 15,
+      support: "Phone and email",
+      button: "Contact us",
+      onClick: () => {},
+    },
+  ];
+
   return (
     <div>
       <div className="header">
@@ -29,31 +60,9 @@ function App() {
           </p>
         </div>
         <div className="card-container">
-          <Card
-            title="Free"
-            price={price}
-            users={10}
-            gb={2}
-            support="Email"
-            button="Sign up for free"
-            onClick={() => increasePrice(price)}
-          />
-          <Card
-            title="Pro"
-            price={15}
-            users={20}
-            gb={10}
-            support="Priority email"
-            button="Get started"
-          />
-          <Card
-            title="Enterprise"
-            price={29}
-            users={30}
-            gb={15}
-            support="Phone and email"
-            button="Contact us"
-          />
+          {cardProps.map((e, index) => (
+            <Card {...e} key={`card ${index}`} />
+          ))}
         </div>
       </div>
       <div className="footer">
