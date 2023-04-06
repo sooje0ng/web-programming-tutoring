@@ -9,10 +9,8 @@ export const Card = ({
   gb,
   support,
   button,
+  onClick,
 }) => {
-  const increasePrice = (price) => {
-    setPrice(price + 1);
-  };
   return (
     <div className="card-wrapper">
       <div className="card-header">
@@ -29,10 +27,7 @@ export const Card = ({
           <li>{support} support</li>
           <li>Help center access</li>
         </ul>
-        <button
-          className="card-body-button"
-          onClick={() => increasePrice(price)}
-        >
+        <button className="card-body-button" onClick={onClick}>
           {button}
         </button>
       </div>

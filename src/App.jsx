@@ -4,6 +4,9 @@ import Card from "./Card.jsx";
 
 function App() {
   const [price, setPrice] = useState(0);
+  const increasePrice = (price) => {
+    setPrice(price + 1);
+  };
   return (
     <div>
       <div className="header">
@@ -29,11 +32,11 @@ function App() {
           <Card
             title="Free"
             price={price}
-            setPrice={setPrice}
             users={10}
             gb={2}
             support="Email"
             button="Sign up for free"
+            onClick={() => increasePrice(price)}
           />
           <Card
             title="Pro"
