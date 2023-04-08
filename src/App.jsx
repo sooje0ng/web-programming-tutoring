@@ -4,8 +4,8 @@ import Card from "./Card.jsx";
 
 function App() {
   const [price, setPrice] = useState(0);
-  const increasePrice = (price) => {
-    setPrice(price + 1);
+  const increasePrice = () => {
+    setPrice((prev) => prev + 1);
   };
 
   const cardProps = [
@@ -16,7 +16,7 @@ function App() {
       gb: 2,
       support: "Email",
       button: "Sign up for free",
-      onClick: () => increasePrice(price),
+      onClick: increasePrice,
     },
     {
       title: "Pro",
@@ -43,42 +43,42 @@ function App() {
       <div className="header">
         <h5 className="title">Company name</h5>
         <nav className="nav">
-          <span className="nav-text">Features</span>
-          <span className="nav-text">Enterprise</span>
-          <span className="nav-text">Support</span>
-          <span className="nav-text">Pricing</span>
+          <span className="nav_text">Features</span>
+          <span className="nav_text">Enterprise</span>
+          <span className="nav_text">Support</span>
+          <span className="nav_text">Pricing</span>
         </nav>
-        <a className="nav-button">Sign up</a>
+        <a className="nav_button">Sign up</a>
       </div>
       <div className="main">
-        <div className="main-pricing">
-          <p className="main-pricing-lg">Pricing</p>
-          <p className="main-pricing-sm">
+        <div className="main_pricing">
+          <p className="main_pricing_lg">Pricing</p>
+          <p className="main_pricing_sm">
             Quickly build an effective pricing table for your potential
             customers with this Bootstrap example. It's built with default
             Bootstrap components and utilities with little customization.
           </p>
         </div>
-        <div className="card-container">
+        <div className="card_container">
           {cardProps.map((e, index) => (
-            <Card {...e} key={`card ${index}`} />
+            <Card {...e} key={`card_item_${index}`} />
           ))}
         </div>
       </div>
       <div className="footer">
-        <div className="footer-row">
-          <div className="footer-row-box">
+        <div className="footer_row">
+          <div className="footer_row_box">
             <img
-              className="mb-2"
+              className="mb_2"
               src="https://getbootstrap.com/docs/4.0/assets/brand/bootstrap-solid.svg"
               width={24}
               height={24}
             />
-            <span className="text-muted sm">&copy; 2017-2018</span>
+            <span className="text_muted sm">&copy; 2017-2018</span>
           </div>
-          <div className="footer-row-box">
-            <p className="list-title">Features</p>
-            <ul className="list text-gray">
+          <div className="footer_row_box">
+            <p className="list_title">Features</p>
+            <ul className="list text_gray">
               <li>
                 <a>Cool stuff</a>
               </li>
@@ -99,9 +99,9 @@ function App() {
               </li>
             </ul>
           </div>
-          <div className="footer-row-box">
-            <p className="list-title">Resources</p>
-            <ul className="list text-gray">
+          <div className="footer_row_box">
+            <p className="list_title">Resources</p>
+            <ul className="list text_gray">
               <li>
                 <a>Resource</a>
               </li>
@@ -116,9 +116,9 @@ function App() {
               </li>
             </ul>
           </div>
-          <div className="footer-row-box">
-            <p className="list-title">About</p>
-            <ul className="list text-gray">
+          <div className="footer_row_box">
+            <p className="list_title">About</p>
+            <ul className="list text_gray">
               <li>
                 <a>Team</a>
               </li>

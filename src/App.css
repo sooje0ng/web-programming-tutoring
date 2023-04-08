@@ -22,18 +22,18 @@
   margin-right: 1rem;
 }
 
-.nav .nav-text {
+.nav .nav_text {
   padding: 0.5rem;
 }
 
-.nav-button {
+.nav_button {
   color: #007bff;
   padding: 6px 12px;
   border: 1px solid #007bff;
   border-radius: 0.25rem;
 }
 
-.main-pricing {
+.main_pricing {
   max-width: 700px;
   text-align: center;
   margin: 0 auto;
@@ -48,14 +48,14 @@ p {
   margin-inline-end: 0px;
   line-height: 1.2;
 }
-.main-pricing-lg {
+.main_pricing_lg {
   margin-top: 0;
   margin-bottom: 0.5rem;
   font-size: 3.5rem;
   font-weight: 300;
 }
 
-.main-pricing-sm {
+.main_pricing_sm {
   margin-top: 0;
   margin-bottom: 1rem;
   font-size: 1.25rem;
@@ -63,7 +63,7 @@ p {
   line-height: 1.5;
 }
 
-.card-container {
+.card_container {
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -72,12 +72,12 @@ p {
   margin-bottom: 1.5rem;
 }
 
-.card-wrapper:first-child .card-body-button {
+.card_wrapper:first-child .card_body_button {
   background-color: transparent;
   color: #007bff;
 }
 
-.card-wrapper:first-child .card-body-button:hover {
+.card_wrapper:first-child .card_body_button:hover {
   background-color: #007bff;
   color: white;
   transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out,
@@ -91,12 +91,12 @@ p {
   border-top: 1px solid #e5e5e5;
 }
 
-.footer-row {
+.footer_row {
   display: flex;
   justify-content: center;
 }
 
-.footer-row-box {
+.footer_row_box {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -110,13 +110,13 @@ p {
   margin-top: 0;
   margin-bottom: 1.5rem;
 }
-.list-title {
+.list_title {
   font-size: 1.25rem;
   font-weight: 500;
   margin-bottom: 0.5rem;
 }
 
-.text-gray {
+.text_gray {
   color: #6c757d;
   font-size: 1rem;
   font-weight: 400;
