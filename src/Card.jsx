@@ -1,7 +1,15 @@
 import React from "react";
 import "./Card.css";
 
-export const Card = ({ title, price, users, gb, support, button, onClick }) => {
+export const Card = ({
+  title,
+  price,
+  users,
+  gb,
+  support,
+  button,
+  increasePrice,
+}) => {
   const dataList = [
     `${users} users included`,
     `${gb} GB of storage`,
@@ -19,11 +27,11 @@ export const Card = ({ title, price, users, gb, support, button, onClick }) => {
           <span className="text_muted">/ mo</span>
         </p>
         <ul className="card_body_list">
-          {dataList.map((e, index) => (
-            <li key={`data_list_${index}`}>{e}</li>
+          {dataList.map((dataListProps, index) => (
+            <li key={`data_list_${index}`}>{dataListProps}</li>
           ))}
         </ul>
-        <button className="card_body_button" onClick={onClick}>
+        <button className="card_body_button" onClick={increasePrice}>
           {button}
         </button>
       </div>

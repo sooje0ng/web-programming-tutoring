@@ -2,39 +2,40 @@ import "./App.css";
 import React, { useState } from "react";
 import Card from "./Card.jsx";
 
-function App() {
-  const [price, setPrice] = useState(0);
-  const increasePrice = () => {
-    setPrice((prev) => prev + 1);
+const App = () => {
+  const [price, setPrice] = useState([0, 15, 29]);
+  const increasePrice = (index) => {
+    const newPrice = [...price];
+    newPrice[index] += 1;
+    setPrice(newPrice);
   };
-
-  const cardProps = [
+  const cardListProps = [
     {
       title: "Free",
-      price: price,
+      price: price[0],
       users: 10,
       gb: 2,
       support: "Email",
       button: "Sign up for free",
-      onClick: increasePrice,
+      increasePrice: () => increasePrice(0),
     },
     {
       title: "Pro",
-      price: 15,
+      price: price[1],
       users: 20,
       gb: 10,
       support: "Priority email",
       button: "Get started",
-      onClick: () => {},
+      increasePrice: () => increasePrice(1),
     },
     {
       title: "Enterprise",
-      price: 29,
+      price: price[2],
       users: 30,
       gb: 15,
       support: "Phone and email",
       button: "Contact us",
-      onClick: () => {},
+      increasePrice: () => increasePrice(2),
     },
   ];
 
@@ -52,16 +53,16 @@ function App() {
       </div>
       <div className="main">
         <div className="main_pricing">
-          <p className="main_pricing_lg">Pricing</p>
-          <p className="main_pricing_sm">
+          <p className="main_pricing_large">Pricing</p>
+          <p className="main_pricing_small">
             Quickly build an effective pricing table for your potential
             customers with this Bootstrap example. It's built with default
             Bootstrap components and utilities with little customization.
           </p>
         </div>
         <div className="card_container">
-          {cardProps.map((e, index) => (
-            <Card {...e} key={`card_item_${index}`} />
+          {cardListProps.map((cardItemProps, index) => (
+            <Card {...cardItemProps} key={`card_item_${index}`} />
           ))}
         </div>
       </div>
@@ -74,7 +75,7 @@ function App() {
               width={24}
               height={24}
             />
-            <span className="text_muted sm">&copy; 2017-2018</span>
+            <span className="text_muted small">&copy; 2017-2018</span>
           </div>
           <div className="footer_row_box">
             <p className="list_title">Features</p>
@@ -137,6 +138,6 @@ function App() {
       </div>
     </div>
   );
-}
+};
 
 export default App;

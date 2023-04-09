@@ -23,6 +23,7 @@
 }
 
 .nav .nav_text {
+  color: #343a40;
   padding: 0.5rem;
 }
 
@@ -48,14 +49,14 @@ p {
   margin-inline-end: 0px;
   line-height: 1.2;
 }
-.main_pricing_lg {
+.main_pricing_large {
   margin-top: 0;
   margin-bottom: 0.5rem;
   font-size: 3.5rem;
   font-weight: 300;
 }
 
-.main_pricing_sm {
+.main_pricing_small {
   margin-top: 0;
   margin-bottom: 1rem;
   font-size: 1.25rem;
